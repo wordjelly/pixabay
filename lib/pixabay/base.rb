@@ -56,11 +56,11 @@ class Pixabay::Base
 		
 		url = (base_url + request_params.delete("url")) + default_image_query_params.merge(query_params).to_param
 
-		puts "url is #{url}"
+		#puts "url is #{url}"
 
 		response = Typhoeus::Request.new(url,method: request_params["method"]).run
 
-		puts "response code is #{response.code.to_s}"
+		#puts "response code is #{response.code.to_s}"
 
 		return response if raw 
 	
